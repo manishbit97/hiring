@@ -1,0 +1,42 @@
+             <<<<<<<<<<  CROPIN ONLINE JUDGE STARTUP PROCESS  >>>>>>>>>>
+
+             Please Follow the below steps after Reboot :
+
+             << Do this in tmux , so that it runs in background , even though the session is Closed. >>
+             command to  start tmux -
+                                        tmux new -s <sessionname>
+             Note : Assuming the Jail is already installed at path -  /path/to/chroot
+             1.) Once the Ubuntu Reboots, please Mount the /proc folder of the Jail .
+                    Code - sudo mount -o bind /proc /path/to/chroot/proc.
+             2.) Start jail and enter it.
+                    Code - sudo chroot /path/to/chroot.
+             3.) cd /home/judge
+             4.) python3 judge.py -judge.
+                    This will enable the judge.
+               <<<<<<<  END    >>>>>>>>>>>
+
+
+Note : For Jail setup and User setup please follow the steps as given the below link:
+                        https://github.com/pushkar8723/Aurora/tree/master/Judge
+
+                        Note : also change the word 'raring' to 'xenial' in line debootstrap --variant=buildd --arch i386 raring /path/to/chroot/ http://archive.ubuntu.com/ubuntu
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<   To setup the whole process from beginning >>>>>>>>>>>>>>>>>>
+
+Please visit - https://github.com/pushkar8723/Aurora
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<  END  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+<<<<<<<<<<<<<<      Github link of the new Webinterface for CROPIN  and DB    >>>>>>>>>>>
+
+    https://git.cropin.in/opensource/hiring
+    DB for the Platform is at - http://13.251.104.53/phpmyadmin
+                        DB name - aurora_dev
+
+<<<<<<<<<<<<    END       >>>>>>>>>>>>>>>>>>>>>>>>>
+
+Note : If u are unable to open other pages except the homepage :
+        See FAQ : https://github.com/pushkar8723/Aurora/wiki/FAQ    //add the current folder in apache2.conf
+Note : if error arises like UNABLE TO GET LOCK ON EXECUTION .while at startup
+        please go the folder where the judge.py is located and then delete it.   sudo rm -rf lock.txt
